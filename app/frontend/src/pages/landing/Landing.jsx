@@ -19,11 +19,18 @@ const Landing = () => {
         <h1>FlowSense</h1>
         <h2>Optimize Your Reading Experience</h2>
 
+        <div className="content-container">
         <div className="button-container">
           <StyledButton onClick={() => navigate("/login")}>Log In</StyledButton>
           <StyledButton onClick={() => navigate("/sign up")}>
             Sign Up
           </StyledButton>
+        </div>
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/doTMUdBBq7A?si=ZkA20KQC38kI63TA" 
+          title="YouTube video player" 
+          allowfullscreen></iframe>
+        </div>
         </div>
       </StyledContainer>
 
@@ -42,15 +49,14 @@ const Landing = () => {
 
 export default Landing;
 
-const Container = styled.div``;
+const Container = styled.div``; // Redundant
 
 const StyledContainer = styled.div`
   padding: 60px;
   background: #62ABD9;
 
-  h1 {
-    margin: 0;  
-    margin-top: 50px;
+  h1 { 
+    margin: 50px 0 0 0;
     font-size: 140px;
     font-weight: 900;
     color: #181C96;
@@ -70,6 +76,26 @@ const StyledContainer = styled.div`
     flex-direction: column;
     padding: 8px 5px; 
     align-items: flex-start;
+    gap: 5px; /*Spacing between buttons*/
+  }
+
+  .content-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Puts space between the buttons and the video */
+    gap: 20px; /* Adds spacing between buttons and video */
+    margin-top: 30px; /* Optional: Adds some spacing above */
+  }
+
+  .video-container {
+    width: 560px; 
+    height: 315px; 
+  }
+  
+  iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
   }
 `;
 
