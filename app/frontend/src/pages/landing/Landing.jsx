@@ -78,18 +78,15 @@ const StyledButton = styled.button`
     45deg,
     #87CEFA, /* Light Sky Blue */
     #00BFFF, /* Sky Blue */
-    #1E90FF, /* Dodger Blue */
-    #4169E1, /* Royal Blue */
+    #00B2EE, /* Deep Sky Blue */
     #48D1CC, /* Medium Turquoise */
-    #00CED1, /* Dark Turquoise */
-    #FAFAD2, /* Light Goldenrod Yellow */
-    #FFD700  /* Gold */
+    #40E0D0  /* Turquoise */
   );
   background-size: 200% 200%;
   animation: gradientAnimation 5s ease infinite;
   border: 3px solid #181C96;
   border-radius: 50px;
-  color: white;
+  color: #181C96;
   padding: 15px 30px;
   font-size: 25px;
   font-weight: 600;
@@ -103,52 +100,30 @@ const StyledButton = styled.button`
   &::after {
     content: '✨';
     position: absolute;
-    font-size: 24px;
-    color: #fff;
+    font-size: 30px;
     opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  &::before {
-    top: -10px;
-    left: -10px;
-  }
-
-  &::after {
-    bottom: -10px;
-    right: -10px;
-  }
-
-  &:hover::before,
-    .button:hover::after {
-    opacity: 1;
   }
 
   &:hover::before {
     content: '✨'; /* Adding two sparkle emojis on the top-left */
-    left: 5px;
-    top: 5px;
-    font-size: 16px;
-    opacity: 1;
+    left: -5px;
+    top: -5px;
+    font-size: 30px;
+    opacity: 0.8;
         }
 
   &:hover::after {
     content: '✨'; /* Adding two sparkle emojis on the bottom-right */
-    right: 5px;
-    bottom: 5px;
-    font-size: 16px;
-    opacity: 1;
+    right: -5px;
+    bottom: -5px;
+    font-size: 30px;
+    opacity: 0.8;
   }
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
 
   @keyframes gradientAnimation {
