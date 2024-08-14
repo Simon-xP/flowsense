@@ -21,7 +21,7 @@ const Landing = () => {
 
         <div className="button-container">
           <StyledButton onClick={() => navigate("/login")}>Log In</StyledButton>
-          <StyledButton onClick={() => navigate("/register")}>
+          <StyledButton onClick={() => navigate("/sign up")}>
             Sign Up
           </StyledButton>
         </div>
@@ -46,12 +46,7 @@ const Container = styled.div``;
 
 const StyledContainer = styled.div`
   padding: 60px;
-  background: linear-gradient(
-    to right,
-    rgba(34, 193, 195, 0.7),
-    rgba(253, 187, 45, 0.7)
-  );
-  text-align: center;
+  background: #62ABD9;
 
   h1 {
     margin: 0;
@@ -67,40 +62,32 @@ const StyledContainer = styled.div`
     font-weight: 700;
     margin-top: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: rgba(255, 255, 255, 0.9); /* Lighter grey color */
+    color: #181C96; 
   }
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   .button-container {
     display: flex;
-    gap: 20px;
-    margin-top: 40px;
+    flex-direction: column;
+    margin-top: 5px;
+    justify-content: flex-start; /* Aligns items to the left */
   }
 `;
 
 const StyledButton = styled.button`
   background: linear-gradient(
     45deg,
-    #ff6b6b,
-    #f06595,
-    #cc5de8,
-    #845ef7,
-    #5c7cfa,
-    #339af0,
-    #22b8cf,
-    #20c997,
-    #51cf66,
-    #94d82d,
-    #fcc419,
-    #ff922b
+    #87CEFA, /* Light Sky Blue */
+    #00BFFF, /* Sky Blue */
+    #1E90FF, /* Dodger Blue */
+    #4169E1, /* Royal Blue */
+    #48D1CC, /* Medium Turquoise */
+    #00CED1, /* Dark Turquoise */
+    #FAFAD2, /* Light Goldenrod Yellow */
+    #FFD700  /* Gold */
   );
-  background-size: 300% 300%;
+  background-size: 200% 200%;
   animation: gradientAnimation 5s ease infinite;
-  border: none;
+  border: 3px solid #181C96;
   border-radius: 50px;
   color: white;
   padding: 15px 30px;
@@ -108,12 +95,55 @@ const StyledButton = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, 
+  box-shadow 0.3s ease;
   margin: 10px;
+
+  &::before,
+  &::after {
+    content: '✨';
+    position: absolute;
+    font-size: 24px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &::before {
+    top: -10px;
+    left: -10px;
+  }
+
+  &::after {
+    bottom: -10px;
+    right: -10px;
+  }
+
+  &:hover::before,
+    .button:hover::after {
+    opacity: 1;
+  }
+
+  &:hover::before {
+    content: '✨'; /* Adding two sparkle emojis on the top-left */
+    left: 5px;
+    top: 5px;
+    font-size: 16px;
+    opacity: 1;
+        }
+
+  &:hover::after {
+    content: '✨'; /* Adding two sparkle emojis on the bottom-right */
+    right: 5px;
+    bottom: 5px;
+    font-size: 16px;
+    opacity: 1;
+  }
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    
   }
 
   &:active {
