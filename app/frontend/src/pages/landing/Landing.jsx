@@ -49,11 +49,11 @@ const StyledContainer = styled.div`
   background: #62ABD9;
 
   h1 {
-    margin: 0;
+    margin: 0;  
     margin-top: 50px;
     font-size: 140px;
     font-weight: 900;
-    color: white;
+    color: #181C96;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
 
@@ -68,8 +68,8 @@ const StyledContainer = styled.div`
   .button-container {
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
-    justify-content: flex-start; /* Aligns items to the left */
+    padding: 8px 5px; 
+    align-items: flex-start;
   }
 `;
 
@@ -83,11 +83,10 @@ const StyledButton = styled.button`
     #40E0D0  /* Turquoise */
   );
   background-size: 200% 200%;
-  animation: gradientAnimation 5s ease infinite;
+  animation: gradientAnimation 4s ease infinite;
   border: 3px solid #181C96;
-  border-radius: 50px;
+  border-radius: 50px; /* rounded corners */
   color: #181C96;
-  padding: 15px 30px;
   font-size: 25px;
   font-weight: 600;
   text-transform: uppercase;
@@ -95,6 +94,9 @@ const StyledButton = styled.button`
   transition: transform 0.3s ease, 
   box-shadow 0.3s ease;
   margin: 10px;
+  width: 200px; /* Set explicit width */
+  height: 70px; /* Set explicit height */
+  
 
   &::before,
   &::after {
@@ -106,23 +108,23 @@ const StyledButton = styled.button`
 
   &:hover::before {
     content: '✨'; /* Adding two sparkle emojis on the top-left */
-    left: -5px;
-    top: -5px;
+    left: -10px;
+    top: -10px;
     font-size: 30px;
     opacity: 0.8;
         }
 
   &:hover::after {
     content: '✨'; /* Adding two sparkle emojis on the bottom-right */
-    right: -5px;
-    bottom: -5px;
+    right: -10px;
+    bottom: -10px;
     font-size: 30px;
     opacity: 0.8;
   }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     
   }
 
