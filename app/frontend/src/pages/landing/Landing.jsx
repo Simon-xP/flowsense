@@ -109,6 +109,7 @@ const StyledButton = styled.button`
     #48D1CC, /* Medium Turquoise */
     #40E0D0  /* Turquoise */
   );
+
   background-size: 200% 200%;
   animation: gradientAnimation 4s ease infinite;
   border: 3px solid #181C96;
@@ -124,7 +125,6 @@ const StyledButton = styled.button`
   width: 200px; /* Set explicit width */
   height: 70px; /* Set explicit height */
   
-
   &::before,
   &::after {
     content: '✨';

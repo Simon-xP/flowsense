@@ -39,7 +39,7 @@ const Logo = styled.div`
 
 const NavLinks = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 10px;
   list-style: none;
 `;
 
