@@ -14,6 +14,7 @@ const Navbar = () => {
       <NavLinks>
         <NavLink onClick={() => navigate('/about')}>About</NavLink>
         <NavLink onClick={() => navigate('/features')}>Features</NavLink>
+        <NavLink onClick={() => navigate('/team')}>Team</NavLink>
         <NavLink onClick={() => navigate('/contact')}>Contact</NavLink>
       </NavLinks>
     </Nav>
@@ -27,14 +28,12 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #181C96;
 `;
 
 const Logo = styled.div`
   cursor: pointer;
-
   img {
-    height: 50px; /* Adjust the height as needed */
+    height: 50px;
   }
 `;
 
@@ -46,7 +45,7 @@ const NavLinks = styled.ul`
 
 const NavLink = styled.li`
   font-size: 18px;
-  color: white;
+  color: #181C96;
   cursor: pointer;
 
   &:hover {
