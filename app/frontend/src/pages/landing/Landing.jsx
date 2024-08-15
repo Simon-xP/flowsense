@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Paragraph from "./Paragraph";
 import { useNavigate } from "react-router-dom";
 import List from "./List";
+import Navbar from "./Navbar"; 
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const Landing = () => {
 
   return (
     <Container>
+      <Navbar />
       <StyledContainer>
         <h1>FlowSense</h1>
         <h2>Optimize Your Reading Experience</h2>
@@ -22,10 +24,9 @@ const Landing = () => {
         <div className="content-container">
         <div className="button-container">
           <StyledButton onClick={() => navigate("/login")}>Log In</StyledButton>
-          <StyledButton onClick={() => navigate("/sign up")}>
-            Sign Up
-          </StyledButton>
+          <StyledButton onClick={() => navigate("/sign up")}>Sign Up</StyledButton>
         </div>
+
         <div class="video-container">
         <iframe src="https://www.youtube.com/embed/doTMUdBBq7A?si=ZkA20KQC38kI63TA" 
           title="YouTube video player" 
